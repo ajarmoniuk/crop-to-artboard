@@ -1,2 +1,4 @@
 /*.project
 /*.code-workspace
+/.idea/
+/crop-dev.iml
