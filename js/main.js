@@ -5,12 +5,22 @@
     'use strict';
     
     const csInterface = new CSInterface();
+    const version = 27;
     
-    function init() {       
+    function init() {
+        
         themeManager.init();
 
         $("#btn_test").click(function () {
-            csInterface.evalScript('crop();');
+            // alert('version ' + version);
+            const jsxPath = csInterface.getSystemPath(SystemPath.EXTENSION) + "/jsx/hostscript.jsx";
+            csInterface.evalScript('$.evalFile("' + jsxPath + '")', function(result) {
+                console.log('Result: ' + result);
+            });
+            // const extensionId = csInterface.getExtensionID();
+            // location.reload();
+            // csInterface.closeExtension();
+            // csInterface.requestOpenExtension(extensionId);
         });
     }
     

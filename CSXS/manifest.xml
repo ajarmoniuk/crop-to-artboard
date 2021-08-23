@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExtensionManifest Version="7.0" ExtensionBundleId="nl.jarmoniuk.crop" ExtensionBundleVersion="1.0.0"
-		ExtensionBundleName="Crop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Adobe-CEP/CEP-Resources/master/CEP_7.x/ExtensionManifest_v_7_0.xsd">
+<ExtensionManifest Version="5.0" ExtensionBundleId="nl.jarmoniuk.jarmoniuk2" ExtensionBundleVersion="1.0.0"
+		ExtensionBundleName="Jarmoniuk2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ExtensionList>
-		<Extension Id="nl.jarmoniuk.crop" Version="1.0" />
+		<Extension Id="nl.jarmoniuk.jarmoniuk2" Version="1.0" />
 	</ExtensionList>
 	<ExecutionEnvironment>
 		<HostList>
-			<Host Name="ILST" Version="17.0" />
+            <Host Name="ILST" Version="[18.0,23.9]" />
 		</HostList>
 		<LocaleList>
 			<Locale Code="All" />
@@ -17,28 +16,40 @@
 		</RequiredRuntimeList>
 	</ExecutionEnvironment>
 	<DispatchInfoList>
-		<Extension Id="nl.jarmoniuk.crop">
+		<Extension Id="nl.jarmoniuk.jarmoniuk2">
 			<DispatchInfo >
 				<Resources>
-					<MainPath>./index.html</MainPath>
-					<ScriptPath>./jsx/hostscript.jsx</ScriptPath>
+				<MainPath>./index.html</MainPath>
+				<ScriptPath>./jsx/hostscript.jsx</ScriptPath>
 				</Resources>
 				<Lifecycle>
 					<AutoVisible>true</AutoVisible>
 				</Lifecycle>
 				<UI>
 					<Type>Panel</Type>
-					<Menu>Crop to Artboard</Menu>
+					<Menu>Jarmoniuk2</Menu>
 					<Geometry>
 						<Size>
-							<Height>50</Height>
-							<Width>100</Width>
-						</Size> 
-						<MaxSize>
 							<Height>100</Height>
-							<Width>400</Width>
-						</MaxSize>                       
+							<Width>100</Width>
+						</Size>
+                    <!--<MinSize>
+                            <Height>550</Height>
+                            <Width>400</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>550</Height>
+                            <Width>400</Width>
+                        </MaxSize>-->
+                        
 					</Geometry>
+					<Icons>
+						<Icon Type="Normal">./icons/iconNormal.png</Icon>
+						<Icon Type="RollOver">./icons/iconRollover.png</Icon>
+						<Icon Type="Disabled">./icons/iconDisabled.png</Icon>
+						<Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
+						<Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
+					</Icons>					
 				</UI>
 			</DispatchInfo>
 		</Extension>
